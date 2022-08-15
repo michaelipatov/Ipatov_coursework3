@@ -69,7 +69,7 @@ def get_post_by_post_id(post_id):
     """Находит пост по его id"""
     try:
         for post in get_posts_all(path_data):
-            if post_id == post['pk']:
+            if post_id == int(post['pk']):
                 return post
     except ValueError:
         return "Такого поста не существует"
