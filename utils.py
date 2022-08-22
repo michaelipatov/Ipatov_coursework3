@@ -56,8 +56,8 @@ def get_comments_by_post_id(post_id):
 def search_for_posts(query):
     """Находит посты по ключевому слову query и добавляет в список post_list"""
     post_by_query_list = []
-    if type(query) != int or type(query) != str:
-        raise TypeError
+    if query == []:
+        raise KeyError
     else:
         for post in get_posts_all(path_data):
             if query.lower() in post['content'].lower():

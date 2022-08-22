@@ -25,10 +25,10 @@
   </header>
   <main class="container">
     <div class="search">
-      <form action="/" class="search__form">
-        <input type="search" class="search__input">
+      <form action="/search" class="search__form">
+        <input type="text" name="s" class="search__input">
       </form>
-      <p class="search__results">Найдено постов: {{find_post_quantity}}</p>
+      <p class="search__results">Найдено постов: {{ find_post_quantity }}</p>
     </div>
     <section class="items">
       {% for post in posts %}
@@ -48,7 +48,7 @@
         <div class="item__post-info">
           <div class="item__counter">
             <img src="../static/img/eye.png" alt="" class="item__counter-icon" width="26">
-            <span class="item__counter-text">{{post.views_count}}</span>
+            <span class="item__counter-text">{{ post.views_count }}</span>
           </div>
         </div>
         <div class="item__post-bottom">

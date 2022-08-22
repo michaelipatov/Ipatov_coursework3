@@ -73,10 +73,10 @@ def test_get_comments_by_post_id_file_error(post_id_list):
 
 
 def test_search_for_posts_file_error():
-    query_list = [1, '1', 'еда', 5.0]
+    query_list = []
     for query in query_list:
         try:
-            with pytest.raises(TypeError):
+            with pytest.raises(KeyError):
                 search_for_posts(query)
         except:
             assert True
