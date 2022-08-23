@@ -1,10 +1,9 @@
 import json
 from json import JSONDecodeError
-from pathlib import Path
+import pathlib
 
-home = Path.home()
-path_data = Path(home, 'PycharmProjects', 'Ipatov_coursework3', 'data', 'data.json')
-path_comments = Path(home, 'PycharmProjects', 'Ipatov_coursework3', 'data', 'comments.json')
+path_data = pathlib.Path('data', 'data.json')
+path_comments = pathlib.Path('data', 'comments.json')
 
 
 def get_posts_all(path_data):
